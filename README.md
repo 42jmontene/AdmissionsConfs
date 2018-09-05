@@ -24,3 +24,5 @@ host=<hostName>`
 * http://XX.XX.XX.XX:5000/delete-htpassword/
 
 `campus=<campusName>`
+
+Tout les chemins sont préconfigurés dans config.py, a changer si l'architecture Nginx est différente de l'architecture classique
