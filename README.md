@@ -25,4 +25,7 @@ host=<hostName>`
 
 `campus=<campusName>`
 
-Tout les chemins sont préconfigurés dans config.py, a changer si l'architecture Nginx est différente de l'architecture classique
+
+
+
+**Tout les chemins sont préconfigurés dans config.py**, a changer si l'architecture Nginx est différente de l'architecture classique
