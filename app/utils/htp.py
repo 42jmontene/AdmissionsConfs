@@ -3,7 +3,7 @@ import htpasswd
 from config import conf
 
 def deleteHtp(data, output):
-    htpName = '.htpasswd_' + data['campus']
+    htpName = '.htpasswd_{}'.format(data['campus'])
     if os.path.isdir(conf.HTPDIR):
         if os.path.isfile(conf.HTPDIR + htpName):
             os.remove(conf.HTPDIR + htpName)
@@ -16,7 +16,7 @@ def deleteHtp(data, output):
         return 1
 
 def handleHtp(data, output):
-    htpName = '.htpasswd_' + data['campus']
+    htpName = '.htpasswd_{}'.format(data['campus'])
     if os.path.isdir(conf.HTPDIR):
         if os.path.isfile(conf.HTPDIR + htpName):
             output['htpStatus'] = 'updated'

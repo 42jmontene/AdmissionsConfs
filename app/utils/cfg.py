@@ -3,7 +3,7 @@ from config import conf
 from flask import render_template
 
 def deleteConf(data, output):
-    confName = data['campus'] + '.conf'
+    confName = '{}.conf'.format(data['campus'])
     if os.path.isdir(conf.CONFDIR):
         if os.path.isfile(conf.CONFDIR + confName):
             os.remove(conf.CONFDIR + confName)
@@ -16,7 +16,7 @@ def deleteConf(data, output):
         return 1
 
 def handleConf(data, output):
-    confName = data['campus'] + '.conf'
+    confName = '{}.conf'.format(data['campus'])
     if os.path.isdir(conf.CONFDIR):
         if os.path.isfile(conf.CONFDIR + confName):
             output['confStatus'] = 'updated'
